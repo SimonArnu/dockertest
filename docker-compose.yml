@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.1'
 services:
   jupyter:
     # build: .
@@ -17,4 +17,5 @@ services:
         mode: 0440
 secrets:
   my_secret:
-    file: ./my_secret.txt
+    #file: ./my_secret.txt
+    external: true
