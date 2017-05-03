@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  jupyter:
+    # build: .
+    image: pythontest
+    ports:
+    - "8888:8888"
+    volumes:
+    - ./notebooks:/notebooks
+    - ./data:/data
+    user: "1000"
+    secrets:
+      - source: my_secret
+        target: jupyter_secret
+        uid: '1000'
+        gid: '1000'
+        mode: 0440
+secrets:
+  my_secret:
+    file: ./my_secret.txt

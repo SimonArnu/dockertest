@@ -1,0 +1,1 @@
+c.NotebookApp.password = u"sha1:04274d7fda46:89d49fe543baf7c7d141fbdecab0ddd927aef73e"
